@@ -1,0 +1,20 @@
+﻿@model TheDraw
+@{
+    ViewData["Title"] = "GetTheDraw";
+}
+
+<h1>GetTheDraw</h1>
+
+@foreach(TheCards card in Model.cards)
+{
+<table>
+    
+        <tr>Card Code:<b> @card.code </b></tr>
+        <tr>Card Suit:<b> @card.suit </b></tr>
+        <tr>Card Value:<b>@card.value </b></tr>
+    
+    <tr>
+        <td><img src="@card.image" /></td>
+    </tr>
+</table>
+}
